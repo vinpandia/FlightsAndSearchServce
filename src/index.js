@@ -13,12 +13,12 @@ const SetupAndStartServer = async() => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
 
-    app.use('./api',ApiRoutes);
+    app.use('/api',ApiRoutes);
     
     app.listen(PORT, async()=>{
         console.log(`server started at ${PORT}`);
         const repo = new CityRepository();
-        repo.createCity({name :"New Delhi"});
+        
     })
 }
 
